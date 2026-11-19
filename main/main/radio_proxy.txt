@@ -1,0 +1,31 @@
+Installation sur PC/Raspberry
+pip install flask
+
+Installe aussi ffmpeg.
+
+Sur Windows : installe ffmpeg puis vérifie :
+
+ffmpeg -version
+
+Lance ensuite :
+
+python radio_proxy.py
+
+Dans ton radio.ino, mets l’IP de ton PC/Raspberry :
+
+#define RADIO_HOST "192.168.1.100"
+#define RADIO_PORT 8080
+
+Remplace 192.168.1.100 par l’IP réelle de ton PC/Raspberry.
+
+Teste dans un navigateur :
+
+http://192.168.1.100:8080/
+
+Tu dois voir :
+
+Radio proxy OK
+
+Puis le CYD2USB pourra lire :
+
+http://192.168.1.100:8080/franceinter.raw
